@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Float, PresentationControls, ContactShadows } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { Suspense, useEffect, useState, useRef } from "react";
@@ -40,6 +40,21 @@ function Entrance3D({ children }: { children: React.ReactNode }) {
   return <group ref={groupRef}>{children}</group>;
 }
 
+function ResponsiveGear() {
+  const { viewport } = useThree();
+  const isMobile = viewport.width < 6; // roughly mobile threshold in 3D units
+
+  return (
+    <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.3}>
+      <Gear3D 
+        position={isMobile ? [1.2, 0, 0] : [2.8, 0, 0]} 
+        scale={isMobile ? 0.6 : 0.9} 
+        rotation={[0.2, -0.6, 0]} 
+      />
+    </Float>
+  );
+}
+
 export default function Hero3D() {
   const [mounted, setMounted] = useState(false);
 
@@ -69,9 +84,7 @@ export default function Hero3D() {
               azimuth={[-Math.PI / 4, Math.PI / 4]}
             >
               <Entrance3D>
-                <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.3}>
-                  <Gear3D position={[2.8, 0, 0]} scale={0.9} rotation={[0.2, -0.6, 0]} />
-                </Float>
+                <ResponsiveGear />
               </Entrance3D>
             </PresentationControls>
 
