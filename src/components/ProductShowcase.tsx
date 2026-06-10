@@ -40,11 +40,11 @@ export default function ProductShowcase() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h2 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase text-white mb-4 md:mb-6">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase text-white mb-4 md:mb-6">
               Core<br />
               <span className="text-white/40">Services</span>
             </h2>
-            <p className="text-white/50 max-w-xl text-lg font-light tracking-wide">
+            <p className="text-white/50 max-w-xl text-base sm:text-lg font-light tracking-wide">
               Engineered to exact specifications. Discover our manufacturing categories designed for uncompromising industrial applications.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ export default function ProductShowcase() {
           </motion.div>
         </div>
         
-        <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-8 -mx-6 px-6 hide-scrollbar cursor-grab active:cursor-grabbing">
+        <div className="flex flex-col md:flex-row md:overflow-x-auto md:snap-x md:snap-mandatory gap-4 md:gap-6 pb-4 md:pb-8 md:-mx-6 md:px-6 hide-scrollbar md:cursor-grab md:active:cursor-grabbing">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}
@@ -77,7 +77,7 @@ export default function ProductShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative overflow-hidden bg-black border border-white/5 p-8 flex flex-col justify-between min-h-[320px] min-w-[280px] md:min-w-[400px] shrink-0 snap-center`}
+              className={`group relative overflow-hidden bg-black border border-white/5 p-6 sm:p-8 flex flex-col justify-between min-h-[200px] sm:min-h-[320px] md:min-w-[400px] md:shrink-0 md:snap-center`}
             >
               {/* Hover effect glow */}
               <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/[0.02] transition-colors duration-700 ease-out" />
@@ -90,7 +90,7 @@ export default function ProductShowcase() {
               </div>
               
               <div className="relative z-10 mt-auto">
-                <h3 className="font-heading text-3xl font-medium tracking-tight mb-3 text-white">
+                <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight mb-3 text-white">
                   {cat.title}
                 </h3>
                 <p className="text-white/50 text-sm tracking-wide font-light max-w-sm">
