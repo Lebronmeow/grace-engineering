@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="snap-y snap-mandatory">
+    <html lang="en">
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#0A0A0A] text-[#F9F9F9]`}
       >
