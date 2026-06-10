@@ -81,7 +81,7 @@ export default function Hero3D() {
       </div>
 
       {/* Radial Gradient overlay to blend 3D with text */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 md:from-black md:via-black/70 md:to-transparent pointer-events-none z-0"></div>
 
       {/* HTML Content Overlay */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center h-full pointer-events-none">
@@ -97,10 +97,10 @@ export default function Hero3D() {
           </motion.div>
 
           <div className="flex flex-col mix-blend-normal">
-            <h1 className="text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white whitespace-nowrap">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white">
               GRACE
             </h1>
-            <h1 className="text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-light leading-[0.85] tracking-tighter text-white whitespace-nowrap z-10 relative">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-light leading-[0.85] tracking-tighter text-white z-10 relative">
               ENGINEERING
             </h1>
           </div>
@@ -109,7 +109,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-3xl text-white/80 font-light mt-8 mb-12 max-w-2xl border-l-2 border-[#E8D44D] pl-6 mix-blend-difference"
+            className="text-base sm:text-xl md:text-3xl text-white/80 font-light mt-6 mb-8 sm:mt-8 sm:mb-12 max-w-2xl border-l-2 border-[#E8D44D] pl-6 mix-blend-difference"
           >
             Delivering Elite Engineering Services and Advanced Manufacturing Solutions.
           </motion.p>
@@ -141,7 +141,7 @@ export default function Hero3D() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
       >
         <span className="text-[10px] uppercase tracking-[0.2em] text-[#F9F9F9]/40">Scroll</span>
         <motion.div

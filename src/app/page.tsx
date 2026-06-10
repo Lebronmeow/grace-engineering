@@ -6,18 +6,10 @@ import ContactCTA from "@/components/ContactCTA";
 export default function Home() {
   return (
     <main className="bg-brand-dark pt-20">
-      <div className="snap-start snap-always min-h-screen">
-        <Hero3D />
-      </div>
-      <div className="snap-start snap-always min-h-screen">
-        <ProductShowcase />
-      </div>
-      <div className="snap-start snap-always min-h-screen">
-        <CapabilitiesPreview />
-      </div>
-      <div className="snap-start snap-always min-h-screen">
-        <ContactCTA />
-      </div>
+      <Hero3D />
+      <ProductShowcase />
+      <CapabilitiesPreview />
+      <ContactCTA />
     </main>
   );
 }

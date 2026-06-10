@@ -37,7 +37,7 @@ export default function Stats() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-24"
         >
-          <h2 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter uppercase text-white mb-6">
+          <h2 className="font-heading text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter uppercase text-white mb-6">
             By The<br />
             <span className="text-white/40">Numbers</span>
           </h2>
@@ -66,7 +66,7 @@ export default function Stats() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-7xl md:text-8xl font-heading font-medium tracking-tighter text-white mb-4">
+                    <div className="text-5xl sm:text-7xl md:text-8xl font-heading font-medium tracking-tighter text-white mb-4">
                       {stat.value}
                     </div>
                     <div className="text-xs text-white/50 uppercase tracking-[0.2em] font-light">
@@ -77,7 +77,7 @@ export default function Stats() {
               ) : (
                 <>
                   <div>
-                    <div className="text-5xl md:text-7xl font-heading font-medium tracking-tighter text-white mb-4">
+                    <div className="text-4xl sm:text-5xl md:text-7xl font-heading font-medium tracking-tighter text-white mb-4">
                       {stat.value}
                     </div>
                     <div className="text-xs text-white/50 uppercase tracking-[0.2em] font-light">

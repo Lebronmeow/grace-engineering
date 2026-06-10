@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link href="/" className="font-heading font-bold text-xl tracking-wider text-brand-light flex items-center gap-2">
+          <Link href="/" className="font-heading font-bold text-lg sm:text-xl tracking-wider text-brand-light flex items-center gap-2">
             GRACE ENGINEERING
           </Link>
         </div>
@@ -64,20 +64,36 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <div className="md:hidden bg-brand-card border-b border-white/10 absolute top-20 left-0 right-0 p-6 flex flex-col gap-4 shadow-xl">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-lg font-medium text-brand-light hover:text-brand-accent transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-brand-card/95 backdrop-blur-xl border-b border-white/10 absolute top-20 left-0 right-0 overflow-hidden shadow-2xl"
+          >
+            <div className="p-6 flex flex-col gap-4">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05, duration: 0.3 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg font-medium text-brand-light hover:text-brand-accent transition-colors block py-2"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }

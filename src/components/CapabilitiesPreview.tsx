@@ -78,7 +78,7 @@ export default function CapabilitiesPreview() {
   ];
 
   return (
-    <section id="capabilities" className="h-[100dvh] flex flex-col justify-center bg-black relative border-t border-white/5">
+    <section id="capabilities" className="min-h-screen py-24 lg:py-32 flex flex-col justify-center bg-black relative border-t border-white/5">
       <div className="absolute left-0 top-0 w-px h-full bg-gradient-to-b from-brand-primary/20 via-transparent to-transparent opacity-50" />
       
       <div className="max-w-7xl mx-auto px-6">
@@ -91,7 +91,7 @@ export default function CapabilitiesPreview() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:sticky top-auto self-center"
           >
-            <h2 className="font-heading text-6xl md:text-8xl font-bold tracking-tighter uppercase text-white mb-6 leading-none">
+            <h2 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter uppercase text-white mb-6 leading-none">
               Facility<br />
               <span className="text-white/40">Specs</span>
             </h2>
@@ -104,15 +104,15 @@ export default function CapabilitiesPreview() {
           <div className="flex flex-col">
             {capabilities.map((cap, i) => (
               <TiltRow key={cap.num} delay={i * 0.15}>
-                <div className="text-8xl md:text-9xl font-heading font-light tracking-tighter text-white/10 group-hover:text-white/30 transition-colors duration-700 select-none">
+                <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-light tracking-tighter text-white/10 group-hover:text-white/30 transition-colors duration-700 select-none">
                   {cap.num}
                 </div>
                 
                 <div className="flex-1 sm:pl-8 sm:border-l border-white/5 group-hover:border-brand-primary/50 transition-colors duration-700">
-                  <h3 className="font-heading text-3xl font-medium tracking-tight mb-4 text-white uppercase group-hover:text-brand-accent transition-colors duration-500">
+                  <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight mb-4 text-white uppercase group-hover:text-brand-accent transition-colors duration-500">
                     {cap.title}
                   </h3>
-                  <p className="text-white/50 text-lg font-light tracking-wide leading-relaxed max-w-xl group-hover:text-white/80 transition-colors duration-500">
+                  <p className="text-white/50 text-base sm:text-lg font-light tracking-wide leading-relaxed max-w-xl group-hover:text-white/80 transition-colors duration-500">
                     {cap.desc}
                   </p>
                 </div>
