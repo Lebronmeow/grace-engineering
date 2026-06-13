@@ -7,23 +7,23 @@ import Link from "next/link";
 export default function ProductShowcase() {
   const categories = [
     {
-      title: "Fasteners",
-      description: "High-tensile bolts, nuts, and screws.",
+      title: "CNC & VMC Precision Machining",
+      description: "High-precision CNC turning and VMC milling for complex components, delivering tight tolerances across small and high-volume production runs.",
       imageText: "01",
     },
     {
-      title: "Pipe Fittings",
-      description: "Precision flanges, elbows, and tees.",
+      title: "Design & Fabrication",
+      description: "End-to-end design support and metal fabrication services tailored to client specifications, from prototyping to finished parts.",
       imageText: "02",
     },
     {
-      title: "CNC Components",
-      description: "Custom machined parts to exact specs.",
+      title: "Tools & Die Mold",
+      description: "Custom tooling, dies, and molds engineered for durability and repeatable accuracy in production processes.",
       imageText: "03",
     },
     {
-      title: "Automotive",
-      description: "Critical components for vehicles.",
+      title: "Quality Control",
+      description: "Rigorous in-house inspection and quality checks at every stage to ensure parts meet exact specifications and industry standards.",
       imageText: "04",
     },
   ];

@@ -42,7 +42,8 @@ export default function ContactCTA() {
                 <p className="text-white/70 text-lg font-light tracking-wide leading-relaxed uppercase">
                   Unit 109, Bldg 5, Patel Indl. Estate,<br />
                   Gauraipada Road, Behind Range Office,<br />
-                  Vasai (East), PIN: 401208.
+                  Vasai (East), Dist. Palghar,<br />
+                  Maharashtra, India - 401208.
                 </p>
               </div>
               
@@ -78,11 +79,12 @@ export default function ContactCTA() {
           >
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Your Name" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
-                <input type="email" placeholder="Your Email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
+                <input type="text" placeholder="Your Name" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
+                <input type="email" placeholder="Your Email" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
               </div>
-              <textarea placeholder="Your Message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
-              <button className="bg-brand-primary text-black font-semibold tracking-wide uppercase py-3 px-6 rounded-xl hover:bg-brand-accent transition-colors w-full flex items-center justify-center gap-2">
+              <input type="tel" placeholder="Phone Number" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
+              <textarea placeholder="Your Message" rows={4} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+              <button type="submit" className="bg-brand-primary text-black font-semibold tracking-wide uppercase py-3 px-6 rounded-xl hover:bg-brand-accent transition-colors w-full flex items-center justify-center gap-2">
                 Send Message <ArrowRight className="w-4 h-4" />
               </button>
             </form>

@@ -16,8 +16,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Grace Engineering | Precision Machining & Manufacturing",
-  description: "ISO 9001:2015 certified manufacturer of stainless steel fasteners, CNC machined components, pipe fittings, and automotive parts in Vasai, Maharashtra.",
+  title: "Grace Engineering | CNC & VMC Precision Machining in Vasai",
+  description: "ISO 9001:2015 certified CNC machine shop in Vasai, Palghar, Maharashtra. Grace Engineering Works specializes in CNC & VMC precision machining, fasteners manufacturing, Traub job work, lathe machining, and milling services.",
+  keywords: [
+    "Grace Engineering", "Grace Engineering Works", "Grace Engg", "Grace Engineering Vasai", 
+    "Grace Industries", "CNC machine shop", "CNC & VMC machining", "Precision machining", 
+    "Precision fasteners", "Fasteners manufacturer", "Job work machining", "Traub job work", 
+    "Lathe machining", "Milling services", "OD grinding services", "Vasai", "Palghar", "Maharashtra"
+  ],
 };
 
 export default function RootLayout({

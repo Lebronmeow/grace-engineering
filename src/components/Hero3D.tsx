@@ -99,15 +99,7 @@ export default function Hero3D() {
       {/* HTML Content Overlay */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center h-full pointer-events-none">
         <div className="max-w-3xl pointer-events-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#E8D44D] animate-pulse"></span>
-            <span className="text-xs font-medium tracking-widest text-[#F9F9F9]/80 uppercase">ISO 9001:2015 CERTIFIED FIRM</span>
-          </motion.div>
+
 
           <div className="flex flex-col mix-blend-normal">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white">

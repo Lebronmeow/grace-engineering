@@ -41,8 +41,8 @@ export default function ContactPage() {
                   <p className="text-brand-light/60 leading-relaxed">
                     Unit 109, Bldg 5, Patel Indl. Estate,<br />
                     Gauraipada Road, Behind Range Office,<br />
-                    Vasai (East), PIN: 401208.<br />
-                    Maharashtra, India
+                    Vasai (East), Dist. Palghar,<br />
+                    Maharashtra, India - 401208.
                   </p>
                 </div>
               </div>
@@ -91,21 +91,21 @@ export default function ContactPage() {
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-brand-light/80 mb-2">First Name</label>
-                    <input type="text" className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                    <label className="block text-sm font-medium text-brand-light/80 mb-2">Full Name</label>
+                    <input type="text" required className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-brand-light/80 mb-2">Last Name</label>
-                    <input type="text" className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                    <label className="block text-sm font-medium text-brand-light/80 mb-2">Phone Number</label>
+                    <input type="tel" required className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-brand-light/80 mb-2">Email Address</label>
-                  <input type="email" className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                  <input type="email" required className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-brand-light/80 mb-2">Message</label>
-                  <textarea rows={5} className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+                  <textarea rows={5} required className="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
                 </div>
                 <button className="w-full bg-brand-primary text-black font-semibold py-4 rounded-xl hover:bg-brand-accent transition-colors flex items-center justify-center gap-2">
                   <Send className="w-5 h-5" /> Send Message
