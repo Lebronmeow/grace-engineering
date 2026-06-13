@@ -40,7 +40,7 @@ export default function AboutUs() {
             <Users className="w-8 h-8 text-brand-primary mb-2" />
             <h3 className="font-heading text-3xl font-medium uppercase tracking-tight text-white">Who we are</h3>
             <p className="text-white/60 text-base md:text-lg leading-relaxed">
-              Established in 2014, Grace Engineering is one of the most modern-day machine workshops in Mumbai. We foster a spirit of continuous learning and innovation to reach new sectors like Medical, Aerospace, Oil & Gas, and Automotive by offering products that will change the present state of machine tools.
+              Founded in 2014, Grace Engineering has evolved into Mumbai's premier advanced machining facility. Driven by a relentless pursuit of innovation, we engineer paradigm-shifting components for the world's most demanding sectors—including Aerospace, Medical, Automotive, and Oil & Gas.
             </p>
           </motion.div>
 
@@ -55,7 +55,7 @@ export default function AboutUs() {
             <Target className="w-8 h-8 text-brand-primary mb-2" />
             <h3 className="font-heading text-3xl font-medium uppercase tracking-tight text-white">What we do</h3>
             <p className="text-white/60 text-base md:text-lg leading-relaxed">
-              We specialize in manufacturing complex and intricate parts. Our flexible infrastructure runs both small and high-volume production, achieving elite levels of precision without compromising on quality at highly competitive pricing.
+              We master the geometry of complex components. Our state-of-the-art infrastructure is calibrated for both agile prototyping and high-volume manufacturing, ensuring uncompromised precision, rigorous tolerances, and unmatched structural integrity at competitive scale.
             </p>
           </motion.div>
 
@@ -70,7 +70,7 @@ export default function AboutUs() {
             <Award className="w-8 h-8 text-brand-primary mb-2" />
             <h3 className="font-heading text-3xl font-medium uppercase tracking-tight text-white">Why we do it</h3>
             <p className="text-white/60 text-base md:text-lg leading-relaxed">
-              We consider our partners, employees, and contributors as family, striving to maintain lifelong relationships. Our entrenched values, ethos, and honourable business conduct deliver the highest precision and value to your supply chain.
+              Engineering is more than a process; it is a partnership. We operate on a foundation of uncompromising ethics, treating every client and employee as family. Our mission is to forge lifelong alliances that elevate the capability and resilience of your supply chain.
             </p>
           </motion.div>
 
