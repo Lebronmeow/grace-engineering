@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -37,7 +38,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link href="/" className="font-heading font-bold text-lg sm:text-xl tracking-wider text-brand-light flex items-center gap-2">
+          <Link href="/" className="font-heading font-bold text-lg sm:text-xl tracking-wider text-brand-light flex items-center gap-3">
+            <Image src="/grace_logo.png" alt="Grace Engineering Logo" width={32} height={32} className="object-contain" />
             GRACE ENGINEERING
           </Link>
         </div>
