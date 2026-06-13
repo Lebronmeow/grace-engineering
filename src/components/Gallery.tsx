@@ -30,11 +30,11 @@ export default function Gallery() {
         </motion.div>
 
         {/* 21st.dev Image Gallery Component */}
-        <div className="flex items-center gap-2 h-[400px] md:h-[600px] w-full">
+        <div className="flex flex-col md:flex-row items-center gap-2 h-auto md:h-[600px] w-full">
           {images.map((img, idx) => (
             <div
               key={idx}
-              className="relative group flex-grow transition-all w-16 md:w-32 rounded-2xl overflow-hidden h-full duration-500 hover:w-[400px] md:hover:w-[800px] bg-brand-dark cursor-pointer"
+              className="relative group flex-grow transition-all w-full md:w-32 rounded-2xl overflow-hidden h-24 hover:h-64 md:h-full md:hover:h-full duration-500 md:hover:w-[800px] bg-brand-dark cursor-pointer"
             >
               <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
               <Image 

@@ -61,8 +61,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
               <Mail className="w-5 h-5 text-brand-primary shrink-0" />
-              <a href="mailto:graceengineerings@gmail.com" className="hover:text-brand-primary transition-colors">
-                graceengineerings@gmail.com
+              <a href="mailto:sales@graceengineering.in" className="hover:text-brand-primary transition-colors">
+                sales@graceengineering.in
               </a>
             </li>
           </ul>
