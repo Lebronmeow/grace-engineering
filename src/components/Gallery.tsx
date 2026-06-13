@@ -9,10 +9,11 @@ export default function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    { src: "/gallery/img1.jpg", alt: "Machining Center" },
+    { src: "/gallery/img1.jpg", alt: "Advanced Machining Center" },
     { src: "/gallery/img2.jpg", alt: "Precision Components" },
-    { src: "/gallery/img3.png", alt: "Measurement & Inspection" },
+    { src: "/gallery/img3.png", alt: "Quality Inspection" },
     { src: "/gallery/img4.png", alt: "CNC Operations" },
+    { src: "/gallery/img5.png", alt: "Manufacturing Excellence" },
   ];
 
   const scroll = (direction: "left" | "right") => {
@@ -84,6 +85,11 @@ export default function Gallery() {
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:rotate-1 grayscale group-hover:grayscale-0"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 flex items-end p-8">
+                <span className="font-heading text-white tracking-widest uppercase text-sm font-medium border-l-2 border-brand-primary pl-4">
+                  {img.alt}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>
