@@ -11,7 +11,7 @@ export function LocationMap({ location, coordinates, className = "" }: { locatio
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-muted/10" />
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5359755498877!2d72.8489!3d19.4078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aec0a4b08d4f%3A0x8e83361df400ec52!2sVasai%20East%2C%20Vasai-Virar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin" 
+          src="https://maps.google.com/maps?q=Grace%20Engineering,%20Unit%20109,%20Bldg%205,%20Patel%20Indl.%20Estate,%20Vasai%20(East),%20Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%" 
           height="100%" 
           style={{border:0}} 
