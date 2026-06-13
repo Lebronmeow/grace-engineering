@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function IndustriesWeServe() {
   const industries = [
-    { name: "Automotive & Ancillary", imageSrc: "https://placehold.co/400x400/transparent/white?text=Car+PNG" },
-    { name: "Construction & Farm Equipment", imageSrc: "https://placehold.co/400x400/transparent/white?text=Tractor+PNG" },
-    { name: "Oil & Gas", imageSrc: "https://placehold.co/400x400/transparent/white?text=Oil+Rig+PNG" },
-    { name: "Medical", imageSrc: "https://placehold.co/400x400/transparent/white?text=Medical+PNG" },
-    { name: "Aerospace", imageSrc: "https://placehold.co/400x400/transparent/white?text=Plane+PNG" },
-    { name: "Precision & General Fasteners", imageSrc: "https://placehold.co/400x400/transparent/white?text=Nut+PNG" },
+    { name: "Automotive & Ancillary", imageSrc: "/industries/automotive.png" },
+    { name: "Construction & Farm Equipment", imageSrc: "/industries/construction.png" },
+    { name: "Oil & Gas", imageSrc: "/industries/oil_rig.png" },
+    { name: "Medical", imageSrc: "/industries/medical.png" },
+    { name: "Aerospace", imageSrc: "/industries/aerospace.png" },
+    { name: "Precision & General Fasteners", imageSrc: "/industries/fasteners.png" },
   ];
 
   return (
@@ -43,10 +43,10 @@ export default function IndustriesWeServe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative bg-brand-card/50 border border-white/5 hover:border-brand-primary/30 p-8 pt-16 rounded-2xl flex flex-col items-center text-center transition-all duration-500 hover:bg-brand-card hover:shadow-2xl hover:shadow-brand-primary/5 mt-12"
+              className="group relative bg-[#121212] border border-white/5 hover:border-brand-primary/30 p-8 pt-16 rounded-2xl flex flex-col items-center text-center transition-all duration-500 hover:bg-[#1A1A1A] hover:shadow-2xl hover:shadow-brand-primary/5 mt-12"
             >
-              {/* Floating Image overlapping the card */}
-              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 group-hover:-translate-y-4 transition-transform duration-500 pointer-events-none drop-shadow-2xl">
+              {/* Floating Image overlapping the card with screen blend mode for pure black removal */}
+              <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 group-hover:-translate-y-4 transition-transform duration-500 pointer-events-none drop-shadow-2xl mix-blend-screen">
                 <Image 
                   src={industry.imageSrc} 
                   alt={industry.name} 
@@ -55,7 +55,7 @@ export default function IndustriesWeServe() {
                 />
               </div>
 
-              <h3 className="font-heading text-xl md:text-2xl font-medium tracking-tight text-brand-light uppercase mt-4">
+              <h3 className="font-heading text-xl md:text-2xl font-medium tracking-tight text-brand-light uppercase mt-6">
                 {industry.name}
               </h3>
             </motion.div>
