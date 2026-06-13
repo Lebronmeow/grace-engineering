@@ -2,20 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    { src: "https://images.unsplash.com/photo-1565515268393-27042aee46dd?q=80&w=1000&auto=format&fit=crop", alt: "Advanced CNC Milling Machine" },
-    { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop", alt: "Workshop Overview" },
-    { src: "https://images.unsplash.com/photo-1530982011887-3cc11cc85693?q=80&w=1000&auto=format&fit=crop", alt: "Precision Machined Gears" },
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop", alt: "Quality Inspection and Metrology" },
-    { src: "https://images.unsplash.com/photo-1611078831633-8c760cd5e2af?q=80&w=1000&auto=format&fit=crop", alt: "VMC Machining Process" },
-    { src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop", alt: "Metal Fabrication and Welding" },
-    { src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop", alt: "Finished Precision Components" },
+    { src: "/gallery/img1.jpg", alt: "Machining Center" },
+    { src: "/gallery/img2.jpg", alt: "Precision Components" },
+    { src: "/gallery/img3.png", alt: "Measurement & Inspection" },
+    { src: "/gallery/img4.png", alt: "CNC Operations" },
   ];
 
   const scroll = (direction: "left" | "right") => {
@@ -24,6 +21,20 @@ export default function Gallery() {
       scrollRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
+        }
+      }
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="gallery" className="py-24 bg-black border-t border-white/5 relative overflow-hidden">
@@ -39,9 +50,6 @@ export default function Gallery() {
             <span className="text-white/40">Infrastructure</span>
           </h2>
           <div className="w-16 h-px bg-brand-primary/50 mb-6" />
-          <p className="text-white/50 max-w-md text-lg font-light tracking-wide">
-            A glimpse into our state-of-the-art manufacturing facility in Vasai.
-          </p>
         </motion.div>
 
         <div className="flex gap-4 mt-8 md:mt-0 hidden md:flex">
@@ -76,11 +84,6 @@ export default function Gallery() {
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:rotate-1 grayscale group-hover:grayscale-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 flex items-end p-8">
-                <span className="font-heading text-white tracking-widest uppercase text-sm font-medium border-l-2 border-brand-primary pl-4">
-                  {img.alt}
-                </span>
-              </div>
             </motion.div>
           ))}
         </div>

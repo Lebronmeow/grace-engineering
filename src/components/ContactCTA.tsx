@@ -45,8 +45,8 @@ export default function ContactCTA() {
                 className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
                 placeholder="Name *"
               />
-              <label htmlFor="name" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
-                Name *
+              <label htmlFor="name" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                Name <span className="text-red-500">*</span>
               </label>
             </div>
 
@@ -58,8 +58,8 @@ export default function ContactCTA() {
                 className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
                 placeholder="E-Mail *"
               />
-              <label htmlFor="email" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
-                E-Mail *
+              <label htmlFor="email" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                E-Mail <span className="text-red-500">*</span>
               </label>
             </div>
 
@@ -95,8 +95,8 @@ export default function ContactCTA() {
                 className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
                 placeholder="Message *"
               />
-              <label htmlFor="message" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
-                Message *
+              <label htmlFor="message" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                Message <span className="text-red-500">*</span>
               </label>
             </div>
 
