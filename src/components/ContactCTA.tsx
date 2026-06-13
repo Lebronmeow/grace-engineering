@@ -1,103 +1,113 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
-import { LocationMap } from "@/components/ui/expand-map";
 
 export default function ContactCTA() {
   return (
-    <section id="contact" className="relative py-12 lg:py-20 bg-black overflow-hidden border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        <div className="mb-12">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter uppercase text-white mb-4 leading-none">
-              Initiate<br />
-              <span className="text-white/40">Contact</span>
-            </h2>
-          </motion.div>
-        </div>
+    <section id="contact" className="relative min-h-[80vh] flex items-center bg-black border-t border-white/5">
+      {/* Background Map */}
+      <div className="absolute inset-0 z-0 grayscale-[0.3] opacity-80">
+        <iframe 
+          src="https://maps.google.com/maps?q=Grace%20Engineering,%20Unit%20109,%20Bldg%205,%20Patel%20Indl.%20Estate,%20Vasai%20(East),%20Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%" 
+          height="100%" 
+          style={{border:0}} 
+          allowFullScreen 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="pointer-events-auto"
+        ></iframe>
+      </div>
+      
+      {/* Optional subtle gradient overlay to ensure text readability on edges */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-          {/* Info Side */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col gap-12"
-          >
-            <div className="space-y-8">
-              <div className="group relative pl-8 border-l border-white/10 hover:border-brand-primary/50 transition-colors duration-500">
-                <div className="absolute left-0 top-0 -translate-x-1/2 w-2 h-2 bg-black border border-white/20 group-hover:border-brand-primary group-hover:bg-brand-primary/20 transition-all duration-500" />
-                <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
-                  <MapPin className="w-4 h-4" /> Address
-                </h4>
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Grace+Engineering+Vasai+East" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white/70 text-lg font-light tracking-wide leading-relaxed uppercase hover:text-brand-primary transition-colors block"
-                >
-                  Unit 109, Bldg 5, Patel Indl. Estate,<br />
-                  Gauraipada Road, Behind Range Office,<br />
-                  Vasai (East), Dist. Palghar,<br />
-                  Maharashtra, India - 401208.
-                </a>
-              </div>
-              
-              <div className="group relative pl-8 border-l border-white/10 hover:border-brand-primary/50 transition-colors duration-500">
-                <div className="absolute left-0 top-0 -translate-x-1/2 w-2 h-2 bg-black border border-white/20 group-hover:border-brand-primary group-hover:bg-brand-primary/20 transition-all duration-500" />
-                <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
-                  <Phone className="w-4 h-4" /> Direct Line
-                </h4>
-                <a href="tel:+919370497270" className="text-white/70 text-lg font-light tracking-wide hover:text-brand-primary transition-colors block">
-                  +91 9370497270
-                </a>
-              </div>
-              
-              <div className="group relative pl-8 border-l border-white/10 hover:border-brand-primary/50 transition-colors duration-500">
-                <div className="absolute left-0 top-0 -translate-x-1/2 w-2 h-2 bg-black border border-white/20 group-hover:border-brand-primary group-hover:bg-brand-primary/20 transition-all duration-500" />
-                <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
-                  <Mail className="w-4 h-4" /> Electronic Mail
-                </h4>
-                <a href="mailto:graceengineerings@gmail.com" className="text-white/70 text-lg font-light tracking-wide hover:text-brand-primary transition-colors block">
-                  graceengineerings@gmail.com
-                </a>
-              </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-20 w-full flex justify-start py-20">
+        
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-[#1A1A1A] p-10 lg:p-14 w-full max-w-md shadow-2xl relative"
+        >
+          <h2 className="font-heading text-4xl mb-4 text-white">Get In Touch</h2>
+          <p className="text-white/60 mb-10 text-sm leading-relaxed">
+            Drop us your query and we will<br />get back to you as soon as we can.
+          </p>
+
+          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <div className="relative">
+              <input 
+                type="text" 
+                id="name"
+                required 
+                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                placeholder="Name *"
+              />
+              <label htmlFor="name" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
+                Name *
+              </label>
             </div>
-          </motion.div>
-          
-          {/* Form & Map Side */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col gap-8"
-          >
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Your Name" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
-                <input type="email" placeholder="Your Email" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
-              </div>
-              <input type="tel" placeholder="Phone Number" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors" />
-              <textarea placeholder="Your Message" rows={4} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
-              <button type="submit" className="bg-brand-primary text-black font-semibold tracking-wide uppercase py-3 px-6 rounded-xl hover:bg-brand-accent transition-colors w-full flex items-center justify-center gap-2">
-                Send Message <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
-            
-            <LocationMap location="Vasai East, Maharashtra" coordinates="19.4078° N, 72.8489° E" className="w-full h-[200px] lg:h-[240px] rounded-2xl border border-white/5 bg-brand-card/50" />
-          </motion.div>
-          
-        </div>
+
+            <div className="relative mt-8">
+              <input 
+                type="email" 
+                id="email"
+                required 
+                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                placeholder="E-Mail *"
+              />
+              <label htmlFor="email" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
+                E-Mail *
+              </label>
+            </div>
+
+            <div className="relative mt-8">
+              <input 
+                type="text" 
+                id="org"
+                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                placeholder="Organization/Company"
+              />
+              <label htmlFor="org" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                Organization/Company
+              </label>
+            </div>
+
+            <div className="relative mt-8">
+              <input 
+                type="tel" 
+                id="phone"
+                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                placeholder="Phone Number"
+              />
+              <label htmlFor="phone" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                Phone Number
+              </label>
+            </div>
+
+            <div className="relative mt-8">
+              <input 
+                type="text" 
+                id="message"
+                required
+                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                placeholder="Message *"
+              />
+              <label htmlFor="message" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs">
+                Message *
+              </label>
+            </div>
+
+            <button 
+              type="submit" 
+              className="mt-12 bg-white text-black font-semibold text-sm tracking-wide py-4 px-8 w-full md:w-auto hover:bg-brand-accent transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+        </motion.div>
       </div>
     </section>
   );
