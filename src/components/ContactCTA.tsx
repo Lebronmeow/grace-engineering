@@ -39,12 +39,17 @@ export default function ContactCTA() {
                 <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
                   <MapPin className="w-4 h-4" /> Address
                 </h4>
-                <p className="text-white/70 text-lg font-light tracking-wide leading-relaxed uppercase">
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Grace+Engineering+Vasai+East" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white/70 text-lg font-light tracking-wide leading-relaxed uppercase hover:text-brand-primary transition-colors block"
+                >
                   Unit 109, Bldg 5, Patel Indl. Estate,<br />
                   Gauraipada Road, Behind Range Office,<br />
                   Vasai (East), Dist. Palghar,<br />
                   Maharashtra, India - 401208.
-                </p>
+                </a>
               </div>
               
               <div className="group relative pl-8 border-l border-white/10 hover:border-brand-primary/50 transition-colors duration-500">
@@ -52,9 +57,9 @@ export default function ContactCTA() {
                 <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
                   <Phone className="w-4 h-4" /> Direct Line
                 </h4>
-                <p className="text-white/70 text-lg font-light tracking-wide">
-                  9370497270
-                </p>
+                <a href="tel:+919370497270" className="text-white/70 text-lg font-light tracking-wide hover:text-brand-primary transition-colors block">
+                  +91 9370497270
+                </a>
               </div>
               
               <div className="group relative pl-8 border-l border-white/10 hover:border-brand-primary/50 transition-colors duration-500">
@@ -62,9 +67,9 @@ export default function ContactCTA() {
                 <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-white/40 mb-3 flex items-center gap-3">
                   <Mail className="w-4 h-4" /> Electronic Mail
                 </h4>
-                <p className="text-white/70 text-lg font-light tracking-wide">
+                <a href="mailto:graceengineerings@gmail.com" className="text-white/70 text-lg font-light tracking-wide hover:text-brand-primary transition-colors block">
                   graceengineerings@gmail.com
-                </p>
+                </a>
               </div>
             </div>
           </motion.div>

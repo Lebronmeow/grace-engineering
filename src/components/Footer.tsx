@@ -19,10 +19,17 @@ export default function Footer() {
         <div>
           <h3 className="font-heading font-semibold text-lg mb-4 text-brand-light">Quick Links</h3>
           <ul className="space-y-3">
-            {["Home", "About Us", "Services Showcase", "Capabilities", "Contact"].map((item) => (
-              <li key={item}>
-                <Link href={item === "Home" ? "/" : `#${item.toLowerCase().replace(" ", "-")}`} className="text-brand-light/60 hover:text-brand-accent transition-colors text-sm">
-                  {item}
+            {[
+              { name: "Home", href: "#home" },
+              { name: "About", href: "#about" },
+              { name: "Services", href: "#services" },
+              { name: "Industries", href: "#industries" },
+              { name: "Gallery", href: "#gallery" },
+              { name: "Contact", href: "#contact" }
+            ].map((item) => (
+              <li key={item.name}>
+                <Link href={item.href} className="text-brand-light/60 hover:text-brand-accent transition-colors text-sm">
+                  {item.name}
                 </Link>
               </li>
             ))}
@@ -35,15 +42,26 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm text-brand-light/60">
               <MapPin className="w-5 h-5 text-brand-primary shrink-0" />
-              <span>Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai (East), PIN: 401208.</span>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Grace+Engineering+Vasai+East" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-brand-primary transition-colors"
+              >
+                Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai (East), PIN: 401208.
+              </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
               <Phone className="w-5 h-5 text-brand-primary shrink-0" />
-              <span>9370497270</span>
+              <a href="tel:+919370497270" className="hover:text-brand-primary transition-colors">
+                +91 9370497270
+              </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
               <Mail className="w-5 h-5 text-brand-primary shrink-0" />
-              <span>graceengineerings@gmail.com</span>
+              <a href="mailto:graceengineerings@gmail.com" className="hover:text-brand-primary transition-colors">
+                graceengineerings@gmail.com
+              </a>
             </li>
           </ul>
         </div>
