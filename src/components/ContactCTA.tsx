@@ -8,7 +8,7 @@ export default function ContactCTA() {
       {/* Background Map */}
       <div className="absolute inset-0 z-0 grayscale-[0.3] opacity-80">
         <iframe 
-          src="https://maps.google.com/maps?q=Grace%20Engineering,%20Unit%20109,%20Bldg%205,%20Patel%20Indl.%20Estate,%20Vasai%20(East),%20Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.513511874288!2d72.846383!3d19.4078296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a92a525bdc9b%3A0x60013c6ead508ae5!2sGRACE%20ENGINEERING!5e0!3m2!1sen!2sin!4v1718029094030!5m2!1sen!2sin"
           width="100%" 
           height="100%" 
           style={{border:0}} 

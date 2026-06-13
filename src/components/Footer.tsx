@@ -43,7 +43,7 @@ export default function Footer() {
             <li className="flex items-start gap-3 text-sm text-brand-light/60">
               <MapPin className="w-5 h-5 text-brand-primary shrink-0" />
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=Grace+Engineering+Vasai+East" 
+                href="https://maps.app.goo.gl/YmxoyhrvhPU4Yndv9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-brand-primary transition-colors"
