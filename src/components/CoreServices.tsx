@@ -58,22 +58,27 @@ function TiltRow({ children, delay }: { children: React.ReactNode, delay: number
   );
 }
 
-export default function CapabilitiesPreview() {
+export default function CoreServices() {
   const capabilities = [
     {
       num: "01",
-      title: "CNC Turning",
-      desc: "High-speed, precision turning centers capable of producing complex cylindrical components with tight tolerances.",
+      title: "CNC & VMC Precision Machining",
+      desc: "High-precision CNC turning and VMC milling for complex components, delivering tight tolerances across small and high-volume production runs.",
     },
     {
       num: "02",
-      title: "Precision Machining",
-      desc: "Advanced vertical machining centers (VMCs) for intricate milling, drilling, and tapping operations.",
+      title: "Design & Fabrication",
+      desc: "End-to-end design support and metal fabrication services tailored to client specifications, from prototyping to finished parts.",
     },
     {
       num: "03",
+      title: "Tools & Die Mold",
+      desc: "Custom tooling, dies, and molds engineered for durability and repeatable accuracy in production processes.",
+    },
+    {
+      num: "04",
       title: "Quality Control",
-      desc: "Rigorous inspection processes utilizing CMMs and advanced metrology to ensure zero-defect delivery.",
+      desc: "Rigorous in-house inspection and quality checks at every stage to ensure parts meet exact specifications and industry standards.",
     },
   ];
 
@@ -92,12 +97,12 @@ export default function CapabilitiesPreview() {
             className="lg:sticky top-auto self-center"
           >
             <h2 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter uppercase text-white mb-6 leading-none">
-              Facility<br />
-              <span className="text-white/40">Specs</span>
+              Core<br />
+              <span className="text-white/40">Services</span>
             </h2>
             <div className="w-16 h-px bg-brand-primary/50 mb-8" />
             <p className="text-white/50 text-lg font-light tracking-wide max-w-sm">
-              Our Vasai facility is equipped with state-of-the-art machinery, configured for high-volume production and specialized custom tooling.
+              We specialize in manufacturing complex and intricate parts with industry-leading precision and uncompromising quality standards.
             </p>
           </motion.div>
 

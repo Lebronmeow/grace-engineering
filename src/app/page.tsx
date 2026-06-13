@@ -1,8 +1,7 @@
 import Hero3D from "@/components/Hero3D";
 import AboutUs from "@/components/AboutUs";
-import ProductShowcase from "@/components/ProductShowcase";
+import CoreServices from "@/components/CoreServices";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
-import CapabilitiesPreview from "@/components/CapabilitiesPreview";
 import Gallery from "@/components/Gallery";
 import ContactCTA from "@/components/ContactCTA";
 
@@ -16,13 +15,10 @@ export default function Home() {
         <AboutUs />
       </div>
       <div className="md:snap-start md:snap-always md:min-h-screen">
-        <ProductShowcase />
+        <CoreServices />
       </div>
       <div className="md:snap-start md:snap-always md:min-h-screen">
         <IndustriesWeServe />
-      </div>
-      <div className="md:snap-start md:snap-always md:min-h-screen">
-        <CapabilitiesPreview />
       </div>
       <div className="md:snap-start md:snap-always md:min-h-screen">
         <Gallery />

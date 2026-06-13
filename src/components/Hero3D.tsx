@@ -98,8 +98,22 @@ export default function Hero3D() {
 
       {/* HTML Content Overlay */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center h-full pointer-events-none">
-        <div className="max-w-3xl pointer-events-auto">
-
+        <div className="max-w-3xl pointer-events-auto">          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            className="mb-8 inline-block"
+          >
+            <a 
+              href="/iso-certificate-placeholder.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/20 hover:border-[#E8D44D]/50 hover:bg-[#1A1A1A] transition-all group shadow-[0_0_15px_rgba(232,212,77,0.1)] hover:shadow-[0_0_25px_rgba(232,212,77,0.2)]"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E8D44D] animate-pulse"></span>
+              <span className="text-sm md:text-base font-semibold tracking-widest text-[#F9F9F9] uppercase">ISO 9001:2015 CERTIFIED FIRM</span>
+            </a>
+          </motion.div>
 
           <div className="flex flex-col mix-blend-normal">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white">
