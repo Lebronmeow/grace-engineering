@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Tilt from "react-parallax-tilt";
 
 export default function IndustriesWeServe() {
   const industries = [
@@ -44,35 +43,25 @@ export default function IndustriesWeServe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -100px 0px" }}
               transition={{ duration: 0.8, delay: idx * 0.15, ease: "easeOut" }}
+              className="group relative bg-[#121212] border border-white/5 hover:border-brand-primary/30 p-8 pt-16 rounded-2xl flex flex-col items-center text-center transition-colors duration-500 hover:bg-[#1A1A1A] hover:shadow-2xl hover:shadow-brand-primary/10 mt-12 h-full"
             >
-              <Tilt 
-                tiltMaxAngleX={10} 
-                tiltMaxAngleY={10} 
-                perspective={1000} 
-                scale={1.02} 
-                transitionSpeed={2000}
-                className="group relative bg-[#121212] border border-white/5 hover:border-brand-primary/30 p-8 pt-16 rounded-2xl flex flex-col items-center text-center transition-colors duration-500 hover:bg-[#1A1A1A] hover:shadow-2xl hover:shadow-brand-primary/10 mt-12 h-full"
+              {/* Floating Image overlapping the card */}
+              <div 
+                className="absolute -top-24 left-1/2 -translate-x-1/2 w-52 h-52 pointer-events-none drop-shadow-2xl group-hover:-translate-y-4 transition-transform duration-500"
               >
-                {/* Floating Image overlapping the card */}
-                <div 
-                  className="absolute -top-24 left-1/2 -translate-x-1/2 w-52 h-52 pointer-events-none drop-shadow-2xl"
-                  style={{ transform: "translateZ(50px)" }}
-                >
-                  <Image 
-                    src={industry.imageSrc} 
-                    alt={industry.name} 
-                    fill 
-                    className="object-contain"
-                  />
-                </div>
+                <Image 
+                  src={industry.imageSrc} 
+                  alt={industry.name} 
+                  fill 
+                  className="object-contain"
+                />
+              </div>
 
-                <h3 
-                  className="font-heading text-xl md:text-2xl font-medium tracking-tight text-brand-light uppercase mt-6"
-                  style={{ transform: "translateZ(30px)" }}
-                >
-                  {industry.name}
-                </h3>
-              </Tilt>
+              <h3 
+                className="font-heading text-xl md:text-2xl font-medium tracking-tight text-brand-light uppercase mt-6"
+              >
+                {industry.name}
+              </h3>
             </motion.div>
           ))}
         </div>
