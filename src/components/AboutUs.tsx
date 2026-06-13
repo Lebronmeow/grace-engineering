@@ -50,7 +50,7 @@ export default function AboutUs() {
                 <h3 className="font-heading text-3xl font-medium uppercase tracking-tight text-white mb-4">Who we are</h3>
               </div>
               <p className="text-white/60 text-base md:text-lg leading-relaxed" style={{ transform: "translateZ(20px)" }}>
-                Founded in 2014, Grace Engineering has evolved into Mumbai's premier advanced machining facility. Driven by a relentless pursuit of innovation, we engineer paradigm-shifting components for the world's most demanding sectors—including Aerospace, Medical, Automotive, and Oil & Gas.
+                Founded in 2014, Grace Engineering has evolved into Mumbai's premier advanced machining facility. Driven by a relentless pursuit of innovation, we engineer paradigm-shifting components for the world's most demanding sectors including Automotive, Oil & Gas, Medical, and Aerospace.
               </p>
             </Tilt>
           </motion.div>
