@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="md:snap-y md:snap-mandatory scroll-smooth">
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#0A0A0A] text-[#F9F9F9] overflow-x-hidden`}
       >
