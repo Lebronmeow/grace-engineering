@@ -102,8 +102,9 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="mb-8 inline-block"
+            className="mb-8 inline-flex flex-col items-start gap-2"
           >
+            <span className="text-xs uppercase tracking-widest text-[#F9F9F9]/60 font-semibold pl-4">Click to view certificate</span>
             <a 
               href="/iso-certificate-placeholder.pdf" 
               target="_blank" 

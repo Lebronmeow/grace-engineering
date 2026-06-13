@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="md:snap-y md:snap-mandatory">
       <body
-        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#0A0A0A] text-[#F9F9F9]`}
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#0A0A0A] text-[#F9F9F9] overflow-x-hidden`}
       >
         <Navbar />
         {children}
