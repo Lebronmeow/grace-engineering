@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContactCTA() {
   return (
-    <section id="contact" className="relative min-h-[80vh] flex items-center bg-black border-t border-white/5">
+    <section id="contact" className="relative min-h-screen flex items-center justify-start bg-black border-t border-white/5 overflow-hidden">
       {/* Background Map */}
       <div className="absolute inset-0 z-0 grayscale-[0.3] opacity-80">
         <iframe 

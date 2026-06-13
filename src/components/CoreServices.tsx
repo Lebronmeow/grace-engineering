@@ -37,16 +37,14 @@ export default function CoreServices() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-16 md:mb-24 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8"
+          className="mb-16 md:mb-24 text-center md:text-left flex flex-col items-center md:items-start gap-6"
         >
-          <div>
-            <h2 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter uppercase text-white mb-6 leading-none">
-              Core<br />
-              <span className="text-white/40">Services</span>
-            </h2>
-            <div className="w-16 h-px bg-brand-primary/50 mx-auto md:mx-0" />
-          </div>
-          <p className="text-white/50 text-lg font-light tracking-wide max-w-sm md:text-right">
+          <h2 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter uppercase text-white leading-none">
+            Core<br />
+            <span className="text-white/40">Services</span>
+          </h2>
+          <div className="w-16 h-px bg-brand-primary/50" />
+          <p className="text-white/50 text-lg font-light tracking-wide max-w-2xl">
             We specialize in manufacturing complex and intricate parts with industry-leading precision and uncompromising quality standards.
           </p>
         </motion.div>
