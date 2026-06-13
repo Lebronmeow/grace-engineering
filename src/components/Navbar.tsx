@@ -38,9 +38,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-4">
-          <Link href="/" className="font-heading font-bold text-base sm:text-xl tracking-wider text-brand-light flex items-center gap-2 sm:gap-3">
-            <Image src="/grace_logo.png" alt="Grace Engineering Logo" width={28} height={28} className="object-contain sm:w-8 sm:h-8" />
-            GRACE <span className="hidden sm:inline">ENGINEERING</span>
+          <Link href="/" className="font-heading font-bold text-xs sm:text-xl tracking-wider text-brand-light flex items-center gap-2 sm:gap-3">
+            <Image src="/grace_logo.png" alt="Grace Engineering Logo" width={24} height={24} className="object-contain sm:w-8 sm:h-8" />
+            GRACE ENGINEERING
           </Link>
         </div>
 
