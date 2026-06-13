@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function Gallery() {
   const images = [
-    { src: "/gallery/img1.jpg", alt: "Advanced Machining Center" },
-    { src: "/gallery/img2.jpg", alt: "Precision Components" },
+    { src: "/gallery/img1.jpg", alt: "Precision Components" },
+    { src: "/gallery/img2.jpg", alt: "VMC Machine Process" },
     { src: "/gallery/img3.png", alt: "Quality Inspection" },
-    { src: "/gallery/img4.png", alt: "CNC Operations" },
-    { src: "/gallery/img5.png", alt: "Manufacturing Excellence" },
+    { src: "/gallery/img4.png", alt: "Finished Precision Component" },
+    { src: "/gallery/img5.png", alt: "Advanced CNC" },
   ];
 
   return (
