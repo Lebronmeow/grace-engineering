@@ -1,8 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function ContactCTA() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    // Add FormSubmit configurations
+    formData.append("_subject", "New Contact Form Query - Grace Engineering");
+    formData.append("_captcha", "false");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sales@graceengineering.in", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSent(true);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try emailing us directly at sales@graceengineering.in");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative min-h-screen flex items-center justify-start bg-black border-t border-white/5 overflow-hidden">
       {/* Background Map */}
@@ -36,77 +72,104 @@ export default function ContactCTA() {
             Drop us your query and we will<br />get back to you as soon as we can.
           </p>
 
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="relative">
-              <input 
-                type="text" 
-                id="name"
-                required 
-                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
-                placeholder="Name *"
-              />
-              <label htmlFor="name" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
-                Name <span className="text-red-500">*</span>
-              </label>
-            </div>
-
-            <div className="relative mt-8">
-              <input 
-                type="email" 
-                id="email"
-                required 
-                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
-                placeholder="E-Mail *"
-              />
-              <label htmlFor="email" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
-                E-Mail <span className="text-red-500">*</span>
-              </label>
-            </div>
-
-            <div className="relative mt-8">
-              <input 
-                type="text" 
-                id="org"
-                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
-                placeholder="Organization/Company"
-              />
-              <label htmlFor="org" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
-                Organization/Company
-              </label>
-            </div>
-
-            <div className="relative mt-8">
-              <input 
-                type="tel" 
-                id="phone"
-                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
-                placeholder="Phone Number"
-              />
-              <label htmlFor="phone" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
-                Phone Number
-              </label>
-            </div>
-
-            <div className="relative mt-8">
-              <input 
-                type="text" 
-                id="message"
-                required
-                className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
-                placeholder="Message *"
-              />
-              <label htmlFor="message" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
-                Message <span className="text-red-500">*</span>
-              </label>
-            </div>
-
-            <button 
-              type="submit" 
-              className="mt-12 bg-white text-black font-semibold text-sm tracking-wide py-4 px-8 w-full md:w-auto hover:bg-brand-accent transition-colors"
+          {isSent ? (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-center justify-center text-center py-10 bg-white/5 border border-white/10 rounded-xl"
             >
-              Send Message
-            </button>
-          </form>
+              <CheckCircle2 className="w-16 h-16 text-[#E8D44D] mb-4" />
+              <h3 className="font-heading text-xl text-white mb-2">Message Sent!</h3>
+              <p className="text-white/60 text-sm">Thank you for reaching out.<br />We will contact you shortly.</p>
+            </motion.div>
+          ) : (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="relative">
+                <input 
+                  type="text" 
+                  id="name"
+                  name="name"
+                  required 
+                  className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                  placeholder="Name *"
+                />
+                <label htmlFor="name" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                  Name <span className="text-red-500">*</span>
+                </label>
+              </div>
+
+              <div className="relative mt-8">
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email"
+                  required 
+                  className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                  placeholder="E-Mail *"
+                />
+                <label htmlFor="email" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                  E-Mail <span className="text-red-500">*</span>
+                </label>
+              </div>
+
+              <div className="relative mt-8">
+                <input 
+                  type="text" 
+                  id="org"
+                  name="organization"
+                  className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                  placeholder="Organization/Company"
+                />
+                <label htmlFor="org" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                  Organization/Company
+                </label>
+              </div>
+
+              <div className="relative mt-8">
+                <input 
+                  type="tel" 
+                  id="phone"
+                  name="phone"
+                  className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                  placeholder="Phone Number"
+                />
+                <label htmlFor="phone" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                  Phone Number
+                </label>
+              </div>
+
+              <div className="relative mt-8">
+                <input 
+                  type="text" 
+                  id="message"
+                  name="message"
+                  required
+                  className="block w-full bg-transparent border-0 border-b border-white/20 px-0 py-2 text-white focus:ring-0 focus:border-white transition-colors peer placeholder-transparent"
+                  placeholder="Message *"
+                />
+                <label htmlFor="message" className="absolute left-0 top-2 text-white/60 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-white peer-valid:-top-4 peer-valid:text-xs flex items-center gap-1">
+                  Message <span className="text-red-500">*</span>
+                </label>
+              </div>
+
+              <input type="text" name="_honey" style={{ display: "none" }} />
+
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="mt-12 bg-white text-black font-semibold text-sm tracking-wide py-4 px-8 w-full md:w-auto hover:bg-brand-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
+              </button>
+            </form>
+          )}
         </motion.div>
       </div>
     </section>
