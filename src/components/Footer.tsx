@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="font-heading font-black text-2xl tracking-wide text-white">
                 GRACE
               </span>
-              <span className="font-heading font-light text-xs tracking-[0.25em] text-white/70 mt-1">
+              <span className="font-heading font-medium text-xs tracking-[0.25em] text-white mt-0.5">
                 ENGINEERING
               </span>
             </div>
