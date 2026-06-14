@@ -117,10 +117,10 @@ export default function Hero3D() {
           </motion.div>
 
           <div className="flex flex-col mix-blend-normal">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white">
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-black leading-[0.85] tracking-tighter text-white">
               GRACE
             </h1>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-light leading-[0.85] tracking-tighter text-white z-10 relative">
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-light leading-[0.85] tracking-tighter text-white z-10 relative">
               ENGINEERING
             </h1>
           </div>
