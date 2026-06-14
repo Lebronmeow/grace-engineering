@@ -8,9 +8,22 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
-          <Link href="/" className="font-heading font-bold text-2xl tracking-wider text-brand-light flex items-center gap-3 mb-4">
-            <Image src="/grace_logo.png" alt="Grace Engineering Logo" width={32} height={32} className="object-contain" />
-            GRACE ENGINEERING
+          <Link href="/" className="flex items-center gap-3 mb-6 group">
+            <Image 
+              src="/grace_logo.png" 
+              alt="Grace Engineering Logo" 
+              width={48} 
+              height={48} 
+              className="object-contain w-12 h-12 transition-transform duration-500 group-hover:rotate-12" 
+            />
+            <div className="flex flex-col justify-center leading-[0.95]">
+              <span className="font-heading font-black text-2xl tracking-wide text-white">
+                GRACE
+              </span>
+              <span className="font-heading font-light text-xs tracking-[0.25em] text-white/70 mt-1">
+                ENGINEERING
+              </span>
+            </div>
           </Link>
           <p className="text-brand-light/60 text-sm leading-relaxed mb-6 max-w-sm">
             Precision Services Through Innovative Manufacturing. ISO 9001:2015 certified manufacturer delivering quality and reliability.
