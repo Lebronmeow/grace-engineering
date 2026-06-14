@@ -112,7 +112,7 @@ export default function Hero3D() {
               className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/20 hover:border-[#E8D44D]/50 hover:bg-[#1A1A1A] transition-all group shadow-[0_0_15px_rgba(232,212,77,0.1)] hover:shadow-[0_0_25px_rgba(232,212,77,0.2)]"
             >
               <span className="w-2.5 h-2.5 rounded-full bg-[#E8D44D] animate-pulse"></span>
-              <span className="text-sm md:text-base font-semibold tracking-widest text-[#F9F9F9] uppercase">ISO 9001:2015 CERTIFIED FIRM</span>
+              <span className="text-sm md:text-base font-semibold tracking-widest text-[#F9F9F9] uppercase">AN ISO 9001:2015 CERTIFIED FIRM</span>
             </a>
           </motion.div>
 

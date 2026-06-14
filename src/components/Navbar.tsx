@@ -50,7 +50,7 @@ export default function Navbar() {
               <span className="font-heading font-black text-lg sm:text-xl tracking-tight text-white leading-[0.85] uppercase">
                 GRACE
               </span>
-              <span className="font-heading font-light text-[9px] sm:text-[10px] tracking-[0.18em] text-white leading-[0.85] uppercase mt-1">
+              <span className="font-heading font-light text-[10px] sm:text-xs tracking-[0.18em] text-white leading-[0.85] uppercase mt-0.5">
                 ENGINEERING
               </span>
             </div>
