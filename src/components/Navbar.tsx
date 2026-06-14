@@ -48,7 +48,7 @@ export default function Navbar() {
             />
             <div className="flex flex-col justify-center items-start select-none">
               <span className="font-heading font-black text-lg sm:text-xl tracking-tighter text-white leading-none uppercase">GRACE</span>
-              <span className="font-heading font-light text-[10px] sm:text-xs tracking-tighter text-white leading-none uppercase mt-0.5 relative -left-[1.5px] sm:-left-[3px]">ENGINEERING</span>
+              <span className="font-heading font-light text-[10px] sm:text-xs tracking-tighter text-white leading-none uppercase mt-0.5 relative -left-[2px] sm:-left-[4px]">ENGINEERING</span>
             </div>
           </Link>
         </div>

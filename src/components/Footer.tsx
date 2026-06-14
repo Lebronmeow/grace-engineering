@@ -18,7 +18,7 @@ export default function Footer() {
             />
             <div className="flex flex-col justify-center items-start select-none">
               <span className="font-heading font-black text-2xl tracking-tighter text-white leading-none uppercase">GRACE</span>
-              <span className="font-heading font-light text-xs sm:text-sm tracking-tighter text-white leading-none uppercase mt-0.5 relative -left-[2px] sm:-left-[4px]">ENGINEERING</span>
+              <span className="font-heading font-light text-xs sm:text-sm tracking-tighter text-white leading-none uppercase mt-0.5 relative -left-[2.5px] sm:-left-[5px]">ENGINEERING</span>
             </div>
           </Link>
           <p className="text-brand-light/60 text-sm leading-relaxed mb-6 max-w-sm">
