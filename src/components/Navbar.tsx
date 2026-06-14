@@ -46,7 +46,7 @@ export default function Navbar() {
               height={40} 
               className="object-contain w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-500 group-hover:rotate-12" 
             />
-            <div className="flex flex-col justify-center select-none">
+            <div className="flex flex-col justify-center items-start select-none">
               <span className="font-heading font-black text-lg sm:text-xl tracking-tight text-white leading-[0.85] uppercase">
                 GRACE
               </span>
