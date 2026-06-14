@@ -68,14 +68,14 @@ export default function ContactCTA() {
       {/* Optional subtle gradient overlay to ensure text readability on edges */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-20 w-full flex justify-start py-20">
+      <div className="max-w-7xl mx-auto px-6 relative z-20 w-full flex justify-start py-20 pointer-events-none">
         
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#1A1A1A] p-10 lg:p-14 w-full max-w-md shadow-2xl relative"
+          className="bg-[#1A1A1A] p-10 lg:p-14 w-full max-w-md shadow-2xl relative pointer-events-auto"
         >
           <h2 className="font-heading text-4xl mb-4 text-white">Get In Touch</h2>
           <p className="text-white/60 mb-10 text-sm leading-relaxed">
