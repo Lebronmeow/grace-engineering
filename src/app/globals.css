@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", var(--font-sans);
-  --font-heading: "Outfit", var(--font-sans);
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
 
   --color-brand-primary: #0077B6;
   --color-brand-primary-light: #00A8E8;

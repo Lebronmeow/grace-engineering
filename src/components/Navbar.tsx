@@ -47,8 +47,8 @@ export default function Navbar() {
               className="object-contain w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-500 group-hover:rotate-12" 
             />
             <div className="flex flex-col justify-center items-start select-none">
-              <span className="font-heading font-black text-lg sm:text-xl tracking-tighter text-white leading-none uppercase">GRACE</span>
-              <span className="font-heading font-light text-[10px] sm:text-xs tracking-tighter text-white leading-none uppercase mt-1">ENGINEERING</span>
+              <span className="font-heading font-black text-lg sm:text-xl tracking-[-0.08em] text-white leading-none uppercase">GRACE</span>
+              <span className="font-heading font-light text-[10px] sm:text-xs tracking-[-0.08em] text-white leading-none uppercase mt-0.5 relative -left-[0.5px] sm:-left-[1px]">ENGINEERING</span>
             </div>
           </Link>
         </div>
