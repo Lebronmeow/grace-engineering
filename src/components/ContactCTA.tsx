@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MapPin } from "lucide-react";
 
 export default function ContactCTA() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,7 +42,12 @@ export default function ContactCTA() {
   return (
     <section id="contact" className="relative min-h-screen flex items-center justify-start bg-black border-t border-white/5 overflow-hidden">
       {/* Background Map */}
-      <div className="absolute inset-0 z-0 grayscale-[0.3] opacity-80">
+      <a 
+        href="https://maps.app.goo.gl/YmxoyhrvhPU4Yndv9" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="absolute inset-0 z-0 grayscale-[0.3] opacity-80 block hover:opacity-90 transition-opacity"
+      >
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.513511874288!2d72.846383!3d19.4078296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a92a525bdc9b%3A0x60013c6ead508ae5!2sGRACE%20ENGINEERING!5e0!3m2!1sen!2sin!4v1718029094030!5m2!1sen!2sin"
           width="100%" 
@@ -51,9 +56,14 @@ export default function ContactCTA() {
           allowFullScreen 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          className="pointer-events-auto"
+          className="pointer-events-none"
         ></iframe>
-      </div>
+        {/* Click indicator/badge */}
+        <div className="absolute bottom-6 right-6 bg-black/80 text-[#F9F9F9] border border-white/20 hover:border-brand-primary/50 text-xs font-semibold px-4 py-2.5 rounded-full flex items-center gap-2 backdrop-blur-md shadow-2xl transition-all z-20 pointer-events-none">
+          <MapPin className="w-3.5 h-3.5 text-brand-primary" />
+          <span>Click to open in Google Maps</span>
+        </div>
+      </a>
       
       {/* Optional subtle gradient overlay to ensure text readability on edges */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />

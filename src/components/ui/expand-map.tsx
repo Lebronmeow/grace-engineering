@@ -18,7 +18,7 @@ export function LocationMap({ location, coordinates, className = "" }: { locatio
           allowFullScreen 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          className="pointer-events-auto"
+          className="pointer-events-none"
         ></iframe>
       </div>
 
