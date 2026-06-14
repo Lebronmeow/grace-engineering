@@ -17,8 +17,8 @@ export default function Footer() {
               className="object-contain w-12 h-12 transition-transform duration-500 group-hover:rotate-12" 
             />
             <div className="flex flex-col justify-center items-start select-none">
-              <span className="font-heading font-black text-2xl tracking-tighter text-white leading-[0.85] uppercase">GRACE</span>
-              <span className="font-heading font-light text-xs sm:text-sm tracking-tighter text-white leading-[0.85] uppercase mt-0.5">ENGINEERING</span>
+              <span className="font-heading font-black text-2xl tracking-tighter text-white leading-none uppercase">GRACE</span>
+              <span className="font-heading font-light text-xs sm:text-sm tracking-tighter text-white leading-none uppercase mt-1">ENGINEERING</span>
             </div>
           </Link>
           <p className="text-brand-light/60 text-sm leading-relaxed mb-6 max-w-sm">
