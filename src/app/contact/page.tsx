@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <p className="text-brand-light/60 leading-relaxed">
                     Unit 109, Bldg 5, Patel Indl. Estate,<br />
                     Gauraipada Road, Behind Range Office,<br />
-                    Vasai (East), Dist. Palghar,<br />
+                    Vasai East, District Palghar,<br />
                     Maharashtra, India - 401208.
                   </p>
                 </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
               </form>
             </div>
 
-            <LocationMap location="Vasai East, Maharashtra" coordinates="19.4078° N, 72.8489° E" className="w-full h-[240px] rounded-3xl" />
+            <LocationMap location="Vasai East, Palghar, India" coordinates="19.4078° N, 72.8489° E" className="w-full h-[240px] rounded-3xl" />
           </motion.div>
         </div>
       </div>

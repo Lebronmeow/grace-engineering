@@ -30,7 +30,7 @@ export default function AboutPage() {
           >
             <h2 className="font-heading text-3xl font-semibold text-white">Our History & Mission</h2>
             <p className="leading-relaxed">
-              Located in the industrial hub of Vasai, Maharashtra, Grace Engineering has grown into a trusted name for precision machining and manufacturing. Our commitment to quality has allowed us to serve diverse industries including automotive, construction, and oil & gas.
+              Located in the industrial hub of Vasai (District Palghar, Maharashtra, India), Grace Engineering has grown into a trusted name for precision machining and manufacturing. Our commitment to quality has allowed us to serve diverse industries including automotive, construction, and oil & gas.
             </p>
             <p className="leading-relaxed">
               Our mission is to deliver high-quality, perfectly engineered components that meet the exact specifications of our clients, on time, every time. We believe in continuous improvement and investing in cutting-edge machinery to stay ahead in the manufacturing sector.

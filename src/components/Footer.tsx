@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="md:snap-start bg-brand-card border-t border-white/10 pt-16 pb-8">
+    <footer className="bg-brand-card border-t border-white/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
@@ -50,7 +50,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-brand-primary transition-colors"
               >
-                Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai (East), PIN: 401208.
+                Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai East, District Palghar, Maharashtra, India, PIN: 401208.
               </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">

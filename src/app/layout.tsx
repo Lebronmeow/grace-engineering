@@ -47,8 +47,8 @@ const jsonLd = {
   "description": "ISO 9001:2015 certified CNC machine shop in Vasai, Palghar, Maharashtra specializing in CNC & VMC precision machining, fasteners manufacturing, and Traub job work.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Ganesh Industrial Estate",
-    "addressLocality": "Vasai East",
+    "streetAddress": "Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office",
+    "addressLocality": "Vasai East, District Palghar",
     "addressRegion": "Maharashtra",
     "postalCode": "401208",
     "addressCountry": "IN"
@@ -73,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="md:snap-y md:snap-mandatory scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
