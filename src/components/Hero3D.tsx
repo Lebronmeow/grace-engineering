@@ -97,7 +97,7 @@ export default function Hero3D() {
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 md:from-black md:via-black/70 md:to-transparent pointer-events-none z-0"></div>
 
       {/* HTML Content Overlay */}
-      <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center h-full pointer-events-none">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-6 flex flex-col justify-center h-full pointer-events-none">
         <div className="max-w-3xl pointer-events-auto">          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
