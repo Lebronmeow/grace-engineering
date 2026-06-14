@@ -52,25 +52,31 @@ export default function ContactPage() {
                 </div>
               </a>
               
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-brand-accent" />
+              <a 
+                href="tel:+919370497270"
+                className="flex items-start gap-5 group/phone cursor-pointer block"
+              >
+                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0 group-hover/phone:border-[#E8D44D]/50 group-hover/phone:shadow-[0_0_15px_rgba(232,212,77,0.2)] transition-all">
+                  <Phone className="w-5 h-5 text-brand-accent group-hover/phone:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-medium text-lg mb-2 text-white">Phone</h4>
-                  <p className="text-brand-light/60">9370497270</p>
+                  <h4 className="font-heading font-medium text-lg mb-2 text-white group-hover/phone:text-brand-accent transition-colors">Phone</h4>
+                  <p className="text-brand-light/60 group-hover/phone:text-brand-light transition-colors">+91 9370497270</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-brand-accent" />
+              <a 
+                href="mailto:sales@graceengineering.in"
+                className="flex items-start gap-5 group/mail cursor-pointer block"
+              >
+                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0 group-hover/mail:border-[#E8D44D]/50 group-hover/mail:shadow-[0_0_15px_rgba(232,212,77,0.2)] transition-all">
+                  <Mail className="w-5 h-5 text-brand-accent group-hover/mail:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-medium text-lg mb-2 text-white">Email</h4>
-                  <p className="text-brand-light/60">graceengineerings@gmail.com</p>
+                  <h4 className="font-heading font-medium text-lg mb-2 text-white group-hover/mail:text-brand-accent transition-colors">Email</h4>
+                  <p className="text-brand-light/60 group-hover/mail:text-brand-light transition-colors">sales@graceengineering.in</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-start gap-5">
                 <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0">

@@ -69,15 +69,15 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
-              <Phone className="w-5 h-5 text-brand-primary shrink-0" />
-              <a href="tel:+919370497270" className="hover:text-brand-primary transition-colors">
-                +91 9370497270
+              <a href="tel:+919370497270" className="flex items-center gap-3 hover:text-brand-primary transition-colors group">
+                <Phone className="w-5 h-5 text-brand-primary shrink-0 group-hover:scale-110 transition-transform" />
+                <span>+91 9370497270</span>
               </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
-              <Mail className="w-5 h-5 text-brand-primary shrink-0" />
-              <a href="mailto:sales@graceengineering.in" className="hover:text-brand-primary transition-colors">
-                sales@graceengineering.in
+              <a href="mailto:sales@graceengineering.in" className="flex items-center gap-3 hover:text-brand-primary transition-colors group">
+                <Mail className="w-5 h-5 text-brand-primary shrink-0 group-hover:scale-110 transition-transform" />
+                <span>sales@graceengineering.in</span>
               </a>
             </li>
           </ul>
