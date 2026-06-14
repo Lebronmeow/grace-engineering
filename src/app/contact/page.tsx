@@ -32,20 +32,25 @@ export default function ContactPage() {
             <div className="bg-brand-card p-8 rounded-3xl border border-white/5 space-y-8">
               <h3 className="font-heading text-2xl font-semibold">Contact Information</h3>
               
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-brand-accent" />
+              <a 
+                href="https://maps.app.goo.gl/YmxoyhrvhPU4Yndv9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-5 group/address cursor-pointer block"
+              >
+                <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0 group-hover/address:border-[#E8D44D]/50 group-hover/address:shadow-[0_0_15px_rgba(232,212,77,0.2)] transition-all">
+                  <MapPin className="w-5 h-5 text-brand-accent group-hover/address:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-medium text-lg mb-2 text-white">Address</h4>
-                  <p className="text-brand-light/60 leading-relaxed">
+                  <h4 className="font-heading font-medium text-lg mb-2 text-white group-hover/address:text-brand-accent transition-colors">Address</h4>
+                  <p className="text-brand-light/60 leading-relaxed group-hover/address:text-brand-light transition-colors">
                     Unit 109, Bldg 5, Patel Indl. Estate,<br />
                     Gauraipada Road, Behind Range Office,<br />
                     Vasai East, District Palghar,<br />
                     Maharashtra, India - 401208.
                   </p>
                 </div>
-              </div>
+              </a>
               
               <div className="flex items-start gap-5">
                 <div className="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center shrink-0">

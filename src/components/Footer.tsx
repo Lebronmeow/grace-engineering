@@ -56,14 +56,16 @@ export default function Footer() {
           <h3 className="font-heading font-semibold text-lg mb-4 text-brand-light">Contact Us</h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm text-brand-light/60">
-              <MapPin className="w-5 h-5 text-brand-primary shrink-0" />
               <a 
                 href="https://maps.app.goo.gl/YmxoyhrvhPU4Yndv9" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-brand-primary transition-colors"
+                className="flex items-start gap-3 hover:text-brand-primary transition-colors group"
               >
-                Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai East, District Palghar, Maharashtra, India, PIN: 401208.
+                <MapPin className="w-5 h-5 text-brand-primary shrink-0 group-hover:scale-110 transition-transform" />
+                <span>
+                  Unit 109, Bldg 5, Patel Indl. Estate, Gauraipada Road, Behind Range Office, Vasai East, District Palghar, Maharashtra, India, PIN: 401208.
+                </span>
               </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-brand-light/60">
