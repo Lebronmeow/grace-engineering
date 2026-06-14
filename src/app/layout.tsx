@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Grace Engineering | CNC & VMC Precision Machining in Vasai",
+  title: "Grace Engineering | CNC VMC Shop",
   description: "ISO 9001:2015 certified CNC machine shop in Vasai, Palghar, Maharashtra. Grace Engineering Works specializes in CNC & VMC precision machining, fasteners manufacturing, Traub job work, lathe machining, and milling services.",
   keywords: [
     "Grace Engineering", "Grace Engineering Works", "Grace Engg", "Grace Engineering Vasai", 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Lathe machining", "Milling services", "OD grinding services", "Vasai", "Palghar", "Maharashtra", "Mumbai"
   ],
   openGraph: {
-    title: "Grace Engineering | CNC & VMC Precision Machining in Vasai",
+    title: "Grace Engineering | CNC VMC Shop",
     description: "ISO 9001:2015 certified CNC machine shop in Vasai, Palghar, Maharashtra. Grace Engineering Works specializes in CNC & VMC precision machining.",
     url: "https://graceengineering.in",
     siteName: "Grace Engineering Works",

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
-          <Link href="/" className="flex items-center gap-3 mb-6 group">
+          <Link href="/" className="flex items-center gap-2 mb-6 group">
             <Image 
               src="/grace_logo.png" 
               alt="Grace Engineering Logo" 
@@ -16,17 +16,17 @@ export default function Footer() {
               height={48} 
               className="object-contain w-12 h-12 transition-transform duration-500 group-hover:rotate-12" 
             />
-            <div className="flex flex-col justify-center leading-[0.95]">
-              <span className="font-heading font-black text-2xl tracking-wide text-white">
+            <div className="flex flex-col justify-center select-none">
+              <span className="font-heading font-black text-2xl tracking-tight text-white leading-[0.85] uppercase">
                 GRACE
               </span>
-              <span className="font-heading font-medium text-xs tracking-[0.25em] text-white mt-0.5">
+              <span className="font-heading font-light text-xs tracking-[0.18em] text-white leading-[0.85] uppercase mt-1">
                 ENGINEERING
               </span>
             </div>
           </Link>
           <p className="text-brand-light/60 text-sm leading-relaxed mb-6 max-w-sm">
-            Precision Services Through Innovative Manufacturing. ISO 9001:2015 certified manufacturer delivering quality and reliability.
+            Engineering your way to success. An ISO 9001:2015 certified manufacturer delivering quality and reliability.
           </p>
         </div>
 

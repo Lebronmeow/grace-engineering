@@ -131,7 +131,7 @@ export default function Hero3D() {
             transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-xl md:text-3xl text-white/80 font-light mt-6 mb-8 sm:mt-8 sm:mb-12 max-w-2xl border-l-2 border-[#E8D44D] pl-6 mix-blend-difference"
           >
-            Delivering Elite Engineering Services and Advanced Manufacturing Solutions.
+            An ISO 9001:2015 Certified Firm delivering elite engineering services and advanced manufacturing solutions.
           </motion.p>
 
           <motion.div
